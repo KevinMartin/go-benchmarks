@@ -6,7 +6,7 @@ import (
 
 var str string
 
-var tests = []struct{
+var tests = []struct {
 	name string
 	test func(string, string) string
 }{

@@ -13,9 +13,11 @@ var tests = []struct {
 }
 
 func Test(t *testing.T) {
+	expect := "bar=BAR,foo=FOO"
+
 	for _, v := range tests {
 		t.Run(v.name, func(t *testing.T) {
-			if v.test("FOO", "BAR") != "bar=BAR,foo=FOO" {
+			if v.test("FOO", "BAR") != expect {
 				t.Error(v.name + " did not match expected output.")
 			}
 		})

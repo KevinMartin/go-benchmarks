@@ -31,9 +31,10 @@ $ make bench
 ```
 goos: darwin
 goarch: amd64
-pkg: github.com/KevinMartin/go-benchmarks/keyValueToString
-Benchmark/MapWithSort-4         	10000000	       480 ns/op	      96 B/op	       5 allocs/op
-Benchmark/Matrix-4              	20000000	       237 ns/op	      64 B/op	       4 allocs/op
+pkg: github.com/kevinmartin/go-benchmarks/keyValueToString
+Benchmark/MapWithSort-8         	10000000	       372 ns/op	      96 B/op	       5 allocs/op
+Benchmark/MatrixStringJoin-8    	20000000	       193 ns/op	      64 B/op	       4 allocs/op
+Benchmark/MatrixStringBuilder-8 	50000000	       108 ns/op	      24 B/op	       2 allocs/op
 PASS
-ok  	github.com/KevinMartin/go-benchmarks/keyValueToString	10.326s
+ok  	github.com/kevinmartin/go-benchmarks/keyValueToString	13.745s
 ```

@@ -10,6 +10,8 @@ Feel free to clone and run the benchmarks on your own. There is a standard way o
 
 ## Commands in each folder
 
+Each folder has a `Makefile` with the following commands available:
+
 ### Running Benchmarks
 
 ```
@@ -20,6 +22,12 @@ $ make bench
 
 ```
 $ make test
+```
+
+### Running Escape Analysis
+
+```
+$ make analysis
 ```
 
 ### Help?

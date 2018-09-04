@@ -9,7 +9,8 @@ var tests = []struct {
 	test func(string, string) string
 }{
 	{"MapWithSort", MapWithSort},
-	{"Matrix", Matrix},
+	{"MatrixStringJoin", MatrixStringJoin},
+	{"MatrixStringBuilder", MatrixStringBuilder},
 }
 
 func Test(t *testing.T) {

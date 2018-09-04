@@ -22,8 +22,8 @@ func MapWithSort(foo, bar string) string {
 	return strings.Join(mySlice, ",")
 }
 
-// Matrix creates a slice of slices.
-func Matrix(foo, bar string) string {
+// MatrixStringJoin creates a slice of slices and uses strings.Join.
+func MatrixStringJoin(foo, bar string) string {
 	myMatrix := [][]string{
 		{"bar", bar},
 		{"foo", foo},
@@ -35,4 +35,26 @@ func Matrix(foo, bar string) string {
 	}
 
 	return strings.Join(mySlice, ",")
+}
+
+// MatrixStringBuilder creates a slice of slices and uses a strings.Builder
+// buffer.
+func MatrixStringBuilder(foo, bar string) string {
+	myMatrix := [][2]string{
+		{"bar", bar},
+		{"foo", foo},
+	}
+
+	b := strings.Builder{}
+	b.Grow(len(myMatrix)*4 - 1)
+	for i, v := range myMatrix {
+		b.WriteString(v[0])
+		b.WriteRune('=')
+		b.WriteString(v[1])
+		if i+1 < len(myMatrix) {
+			b.WriteRune(',')
+		}
+	}
+
+	return b.String()
 }

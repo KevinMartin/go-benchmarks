@@ -1,3 +1,6 @@
+[![Go Report Card](https://goreportcard.com/badge/github.com/kevinmartin/go-benchmarks)](https://goreportcard.com/report/github.com/kevinmartin/go-benchmarks)
+[![Build Status](https://travis-ci.org/KevinMartin/go-benchmarks.svg?branch=master)](https://travis-ci.org/KevinMartin/go-benchmarks)
+
 # go-benchmarks
 
 Random Go Benchmarks
@@ -17,6 +20,8 @@ Each folder has a `Makefile` with the following commands available:
 ```
 $ make bench
 ```
+
+[Note: The latest benchmarks are available on CI.](https://travis-ci.org/KevinMartin/go-benchmarks)
 
 ### Running Tests
 

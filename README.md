@@ -3,7 +3,9 @@
 
 # go-benchmarks
 
-Random Go Benchmarks
+A collection of random Go benchmarks.
+
+TLDR: [View Latest Benchmark Results on CI →](https://travis-ci.org/KevinMartin/go-benchmarks)
 
 ## How to Use
 
@@ -20,8 +22,6 @@ Each folder has a `Makefile` with the following commands available:
 ```
 $ make bench
 ```
-
-[Note: The latest benchmarks are available on CI.](https://travis-ci.org/KevinMartin/go-benchmarks)
 
 ### Running Tests
 

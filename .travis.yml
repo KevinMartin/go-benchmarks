@@ -3,8 +3,9 @@ go:
   - "1.11"
 install:
   - go get -v -t ./...
-script:
+before_script:
   - go test -v ./...
+script:
   - find . -maxdepth 1 -type d \( ! -name . ! -name .git \) -exec bash -c 'cd {} && make bench' \;
 jobs:
   fast_finish: true

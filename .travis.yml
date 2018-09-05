@@ -4,7 +4,7 @@ go:
 install:
   - go get -v -t ./...
 script:
-  - find . -maxdepth 1 -type d \( ! -name . ! -name .git \) -exec bash -c 'cd {} && make test' \;
+  - go test -v ./...
   - find . -maxdepth 1 -type d \( ! -name . ! -name .git \) -exec bash -c 'cd {} && make bench' \;
 jobs:
   fast_finish: true

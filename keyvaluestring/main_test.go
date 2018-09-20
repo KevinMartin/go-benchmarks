@@ -11,6 +11,7 @@ var tests = []struct {
 	{"MapWithSort", MapWithSort},
 	{"MatrixStringJoin", MatrixStringJoin},
 	{"MatrixStringBuilder", MatrixStringBuilder},
+	{"MatrixStringBuilderGrow", MatrixStringBuilderGrow},
 }
 
 func Test(t *testing.T) {

@@ -46,7 +46,36 @@ func MatrixStringBuilder(foo, bar string) string {
 	}
 
 	b := strings.Builder{}
-	b.Grow(len(myMatrix)*4 - 1)
+	for i, v := range myMatrix {
+		b.WriteString(v[0])
+		b.WriteRune('=')
+		b.WriteString(v[1])
+		if i+1 < len(myMatrix) {
+			b.WriteRune(',')
+		}
+	}
+
+	return b.String()
+}
+
+// MatrixStringBuilderGrow creates a slice of slices, uses a strings.Builder
+// buffer, and pre-allocates a large buffer.
+func MatrixStringBuilderGrow(foo, bar string) string {
+	myMatrix := [][2]string{
+		{"bar", bar},
+		{"foo", foo},
+	}
+
+	var buflen int
+	for i, v := range myMatrix {
+		buflen += len(v[0]) + len(v[1]) + 1
+		if i+1 < len(myMatrix) {
+			buflen++
+		}
+	}
+
+	b := strings.Builder{}
+	b.Grow(buflen)
 	for i, v := range myMatrix {
 		b.WriteString(v[0])
 		b.WriteRune('=')
